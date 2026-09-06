@@ -51,7 +51,7 @@ function tap(){
  heart.textContent='💖';again.classList.remove('hidden');confetti();}
 }
 function reset(){n=0;document.body.style.background='#000000';fill.style.width='0';counter.textContent='0 de 3';
-msg.textContent='¡Hola Beibicita Guapa! Toca el corazón 👆🏽 ❤️';heart.textContent='❤️';again.classList.add('hidden')}
+msg.textContent='¡Hola Beibicita Guapa!<br>Toca el corazón 👆🏽';heart.textContent='❤️';again.classList.add('hidden')}
 heart.addEventListener('click',tap);
 heart.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();tap()}});
 again.addEventListener('click',reset);
