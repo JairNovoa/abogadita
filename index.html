@@ -34,7 +34,7 @@ const heart=document.getElementById('heart'),fill=document.getElementById('fill'
 counter=document.getElementById('counter'),msg=document.getElementById('msg'),
 again=document.getElementById('again');let n=0;
 function confetti(){
- const items=['❤️','💕','🌈','💖','💗','💜','💙','💛'];
+ const items=['❤️','💕','🌈','💖','💗','💜','💙','💛','👩🏻‍⚖️','🙋🏽'];
  for(let i=0;i<35;i++){const p=document.createElement('span');p.className='particle';
  p.textContent=items[Math.floor(Math.random()*items.length)];
  p.style.left=(Math.random()*100)+'vw';p.style.top=(Math.random()*30)+'vh';
@@ -44,14 +44,14 @@ function confetti(){
 function tap(){
  if(n>=3)return;n++;
  fill.style.width=(n*33.333)+'%';counter.textContent=n+' de 3';
- if(n===1){document.body.style.background='#00ffff';msg.textContent='No pares Beibicita... ❤️'}
+ if(n===1){document.body.style.background='#00ffff';msg.textContent='Una vez más... ❤️'}
  if(n===2){document.body.style.background='#00ff00';msg.textContent='Ya casi... 💗'}
  if(n===3){document.body.style.background='#ff00ff';
- msg.textContent='¡Que tu día esté lleno de colores 🌈. Te amo mucho Abogadita 👩🏻‍⚖️💕🙋🏾!';
+ msg.textContent='¡Que tu día esté lleno de colores 🌈. Te amo mucho Abogadita!';
  heart.textContent='💖';again.classList.remove('hidden');confetti();}
 }
 function reset(){n=0;document.body.style.background='#000000';fill.style.width='0';counter.textContent='0 de 3';
-msg.textContent='Toca el corazón ❤️';heart.textContent='❤️';again.classList.add('hidden')}
+msg.textContent='¡Hola Beibicita Guapa! Toca el corazón 👆🏽 ❤️';heart.textContent='❤️';again.classList.add('hidden')}
 heart.addEventListener('click',tap);
 heart.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();tap()}});
 again.addEventListener('click',reset);
